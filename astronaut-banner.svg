@@ -109,7 +109,7 @@
   <!-- Title text (center) -->
   <g>
     <text x="50%" y="52" text-anchor="middle" fill="#c7d2ff" font-family="Inter, Segoe UI, Arial" font-size="26" letter-spacing="1">
-      Surendhar’s Cosmic Portfolio
+      Surendhar’s Cosmic GitHub
     </text>
     <text x="50%" y="82" text-anchor="middle" fill="#8fa0ff" font-family="Inter, Segoe UI, Arial" font-size="14" opacity="0.9">
       Full-Stack Developer • React • Laravel • SQL
