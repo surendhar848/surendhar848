@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="60" viewBox="0 0 1200 60" aria-label="Animated starfield divider">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b1023"/>
+      <stop offset="100%" stop-color="#141a33"/>
+    </linearGradient>
+    <symbol id="s"><circle r="1.5" fill="#ffffff"/></symbol>
+  </defs>
+
+  <rect width="1200" height="60" fill="url(#g)"/>
+
+  <!-- sprinkle stars -->
+  <g transform="translate(80,20)"><use href="#s"/><animate attributeName="opacity" values="0.2;1;0.2" dur="3s" repeatCount="indefinite"/></g>
+  <g transform="translate(160,35)"><use href="#s"/><animate attributeName="opacity" values="1;0.4;1" dur="2.6s" repeatCount="indefinite"/></g>
+  <g transform="translate(260,18)"><use href="#s"/><animate attributeName="opacity" values="0.3;1;0.3" dur="3.8s" repeatCount="indefinite"/></g>
+  <g transform="translate(360,42)"><use href="#s"/><animate attributeName="opacity" values="0.5;1;0.5" dur="3.2s" repeatCount="indefinite"/></g>
+  <g transform="translate(480,26)"><use href="#s"/><animate attributeName="opacity" values="0.2;1;0.2" dur="4s" repeatCount="indefinite"/></g>
+  <g transform="translate(600,30)"><use href="#s"/><animate attributeName="opacity" values="0.4;1;0.4" dur="2.9s" repeatCount="indefinite"/></g>
+  <g transform="translate(720,16)"><use href="#s"/><animate attributeName="opacity" values="0.3;1;0.7;1" dur="3.7s" repeatCount="indefinite"/></g>
+  <g transform="translate(850,38)"><use href="#s"/><animate attributeName="opacity" values="1;0.6;1" dur="2.7s" repeatCount="indefinite"/></g>
+  <g transform="translate(980,22)"><use href="#s"/><animate attributeName="opacity" values="0.2;1;0.2" dur="3.4s" repeatCount="indefinite"/></g>
+  <g transform="translate(1100,34)"><use href="#s"/><animate attributeName="opacity" values="0.7;1;0.7" dur="2.8s" repeatCount="indefinite"/></g>
+</svg>
