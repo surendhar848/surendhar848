@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Animated banner: astronaut hops across the moon surface with twinkling stars -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="Astronaut jumping on the moon">
+  <!-- Background gradient (night sky) -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b1023"/>
+      <stop offset="100%" stop-color="#141a33"/>
+    </linearGradient>
+
+    <!-- Simple star as reusable symbol -->
+    <symbol id="star">
+      <circle r="1.6" fill="#ffffff"/>
+    </symbol>
+
+    <!-- Jump path over the moon (astronaut follows this) -->
+    <path id="jumpPath" d="M 80 210 C 330 60, 870 60, 1120 210" fill="none" stroke="none"/>
+  </defs>
+
+  <rect width="1200" height="320" fill="url(#sky)"/>
+
+  <!-- Twinkling stars -->
+  <g opacity="0.95">
+    <!-- Randomly placed stars with subtle twinkle -->
+    <g transform="translate(70,50)"><use href="#star"/><animate attributeName="opacity" values="0.2;1;0.3;1;0.5" dur="4.2s" repeatCount="indefinite"/></g>
+    <g transform="translate(160,90)"><use href="#star"/><animate attributeName="opacity" values="1;0.4;1" dur="3.6s" repeatCount="indefinite"/></g>
+    <g transform="translate(240,40)"><use href="#star"/><animate attributeName="opacity" values="0.6;1;0.5;1" dur="5s" repeatCount="indefinite"/></g>
+    <g transform="translate(330,120)"><use href="#star"/><animate attributeName="opacity" values="0.3;1;0.3" dur="4.8s" repeatCount="indefinite"/></g>
+    <g transform="translate(420,30)"><use href="#star"/><animate attributeName="opacity" values="1;0.2;1" dur="3.3s" repeatCount="indefinite"/></g>
+    <g transform="translate(510,80)"><use href="#star"/><animate attributeName="opacity" values="0.4;1;0.4" dur="4.5s" repeatCount="indefinite"/></g>
+    <g transform="translate(600,55)"><use href="#star"/><animate attributeName="opacity" values="0.2;1;0.2" dur="6s" repeatCount="indefinite"/></g>
+    <g transform="translate(690,110)"><use href="#star"/><animate attributeName="opacity" values="0.5;1;0.5" dur="3.8s" repeatCount="indefinite"/></g>
+    <g transform="translate(780,35)"><use href="#star"/><animate attributeName="opacity" values="0.3;1;0.7;1" dur="5.4s" repeatCount="indefinite"/></g>
+    <g transform="translate(870,90)"><use href="#star"/><animate attributeName="opacity" values="1;0.6;1" dur="4.1s" repeatCount="indefinite"/></g>
+    <g transform="translate(960,60)"><use href="#star"/><animate attributeName="opacity" values="0.2;1;0.2" dur="5.6s" repeatCount="indefinite"/></g>
+    <g transform="translate(1050,25)"><use href="#star"/><animate attributeName="opacity" values="0.7;1;0.7" dur="3.9s" repeatCount="indefinite"/></g>
+  </g>
+
+  <!-- Shooting star -->
+  <g transform="translate(0,0)">
+    <line x1="1150" y1="50" x2="1180" y2="60" stroke="#b8d7ff" stroke-width="2" stroke-linecap="round" opacity="0.9">
+      <animate attributeName="x1" values="1150; -80" dur="4.5s" repeatCount="indefinite"/>
+      <animate attributeName="y1" values="50; 10" dur="4.5s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="1180; -50" dur="4.5s" repeatCount="indefinite"/>
+      <animate attributeName="y2" values="60; 20" dur="4.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;0" dur="4.5s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- Moon surface (horizon) -->
+  <path d="M0,240 C200,210 1000,260 1200,230 L1200,320 L0,320 Z" fill="#2b2f44"/>
+  <!-- Craters -->
+  <ellipse cx="220" cy="265" rx="45" ry="9" fill="#26293a" opacity="0.6"/>
+  <ellipse cx="520" cy="275" rx="60" ry="12" fill="#26293a" opacity="0.6"/>
+  <ellipse cx="890" cy="260" rx="38" ry="8" fill="#26293a" opacity="0.6"/>
+
+  <!-- Astronaut group -->
+  <g id="astronaut" transform="translate(-100,0)">
+    <!-- Shadow -->
+    <ellipse id="shadow" cx="0" cy="0" rx="22" ry="6" fill="#14182a" opacity="0.35">
+      <animate attributeName="opacity" values="0.15;0.35;0.15" dur="2.8s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Body -->
+    <g transform="translate(0,-28)">
+      <!-- Backpack -->
+      <rect x="-16" y="-18" width="32" height="36" rx="6" fill="#5f6c8f"/>
+      <!-- Torso -->
+      <rect x="-14" y="-20" width="28" height="40" rx="8" fill="#cfd6ee"/>
+      <!-- Helmet -->
+      <circle cx="0" cy="-28" r="16" fill="#cfd6ee"/>
+      <circle cx="0" cy="-28" r="12" fill="#1a2036"/>
+      <!-- Visor shine -->
+      <ellipse cx="-4" cy="-32" rx="6" ry="3" fill="#4aa6ff" opacity="0.6"/>
+      <!-- Arms -->
+      <rect x="-24" y="-14" width="10" height="22" rx="4" fill="#cfd6ee"/>
+      <rect x="14"  y="-14" width="10" height="22" rx="4" fill="#cfd6ee"/>
+      <!-- Legs -->
+      <rect x="-12" y="16" width="10" height="22" rx="3" fill="#cfd6ee"/>
+      <rect x="2"   y="16" width="10" height="22" rx="3" fill="#cfd6ee"/>
+      <!-- Boots -->
+      <rect x="-14" y="38" width="14" height="6" rx="2" fill="#94a0c7"/>
+      <rect x="2"   y="38" width="14" height="6" rx="2" fill="#94a0c7"/>
+      <!-- Chest panel -->
+      <rect x="-8" y="-6" width="16" height="12" rx="2" fill="#8ea0ce"/>
+      <circle cx="-3" cy="-2" r="2" fill="#47e0ff"/>
+      <circle cx="3"  cy="-2" r="2" fill="#ff6b6b"/>
+    </g>
+
+    <!-- Motion along jump path -->
+    <animateMotion dur="6.5s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#jumpPath"/>
+    </animateMotion>
+
+    <!-- Subtle hop (vertical bob) -->
+    <animateTransform attributeName="transform" attributeType="XML" type="translate"
+      values="0,0; 0,-6; 0,0" dur="0.8s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Sync the shadow to sit near the ground under the astronaut via the same path -->
+  <g>
+    <ellipse cx="0" cy="0" rx="24" ry="7" fill="#111629" opacity="0.28">
+      <animateMotion dur="6.5s" repeatCount="indefinite">
+        <mpath href="#jumpPath"/>
+      </animateMotion>
+    </ellipse>
+  </g>
+
+  <!-- Title text (center) -->
+  <g>
+    <text x="50%" y="52" text-anchor="middle" fill="#c7d2ff" font-family="Inter, Segoe UI, Arial" font-size="26" letter-spacing="1">
+      Surendhar’s Cosmic Portfolio
+    </text>
+    <text x="50%" y="82" text-anchor="middle" fill="#8fa0ff" font-family="Inter, Segoe UI, Arial" font-size="14" opacity="0.9">
+      Full-Stack Developer • React • Laravel • SQL
+    </text>
+  </g>
+</svg>
