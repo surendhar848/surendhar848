@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" width="1000" height="300">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#05010f"/>
+      <stop offset="1" stop-color="#241b4d"/>
+    </linearGradient>
+    <radialGradient id="earth" cx="0.4" cy="0.4" r="0.7">
+      <stop offset="0" stop-color="#5ec8ff"/>
+      <stop offset="1" stop-color="#0a3d91"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1000" height="300" fill="url(#sky)"/>
+
+  <!-- Twinkling stars -->
+  <g fill="#fff">
+    <circle cx="80"  cy="40"  r="1.8"><animate attributeName="opacity" values="1;0.2;1" dur="2s"   repeatCount="indefinite"/></circle>
+    <circle cx="190" cy="90"  r="1.2"><animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="300" cy="30"  r="2"  ><animate attributeName="opacity" values="1;0.1;1" dur="2.5s" repeatCount="indefinite"/></circle>
+    <circle cx="420" cy="70"  r="1.4"><animate attributeName="opacity" values="0.2;1;0.2" dur="1.8s" repeatCount="indefinite"/></circle>
+    <circle cx="560" cy="35"  r="1.8"><animate attributeName="opacity" values="1;0.3;1" dur="3.2s" repeatCount="indefinite"/></circle>
+    <circle cx="680" cy="95"  r="1.2"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.2s" repeatCount="indefinite"/></circle>
+    <circle cx="790" cy="45"  r="2"  ><animate attributeName="opacity" values="1;0.2;1" dur="2.8s" repeatCount="indefinite"/></circle>
+    <circle cx="900" cy="80"  r="1.5"><animate attributeName="opacity" values="0.3;1;0.3" dur="1.9s" repeatCount="indefinite"/></circle>
+    <circle cx="140" cy="150" r="1.2"><animate attributeName="opacity" values="1;0.2;1" dur="3.5s" repeatCount="indefinite"/></circle>
+    <circle cx="960" cy="150" r="1.6"><animate attributeName="opacity" values="0.2;1;0.2" dur="2.4s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- Shooting star -->
+  <line x1="0" y1="0" x2="70" y2="25" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0">
+    <animateTransform attributeName="transform" type="translate" values="-100,20; 1100,260" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.9;1" dur="6s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Earth -->
+  <circle cx="830" cy="90" r="46" fill="url(#earth)"/>
+  <ellipse cx="820" cy="80" rx="14" ry="8" fill="#3fbf6a" opacity="0.85"/>
+  <ellipse cx="848" cy="104" rx="10" ry="6" fill="#3fbf6a" opacity="0.85"/>
+
+  <!-- Moon surface -->
+  <path d="M0 260 Q250 215 500 250 T1000 240 L1000 300 L0 300 Z" fill="#c9c9d6"/>
+  <path d="M0 275 Q300 240 560 270 T1000 262 L1000 300 L0 300 Z" fill="#a8a8bb"/>
+  <ellipse cx="200" cy="268" rx="34" ry="7" fill="#8c8ca3"/>
+  <ellipse cx="720" cy="274" rx="42" ry="8" fill="#8c8ca3"/>
+
+  <!-- Astronaut jumping -->
+  <g>
+    <animateTransform attributeName="transform" type="translate"
+      values="0,0; 0,-90; 0,0" keyTimes="0;0.5;1"
+      calcMode="spline" keySplines="0.3 0 0.5 1; 0.5 0 0.7 1"
+      dur="2.6s" repeatCount="indefinite"/>
+    <g transform="translate(470,170)">
+      <!-- backpack -->
+      <rect x="-30" y="12" width="16" height="42" rx="6" fill="#d0d0e0"/>
+      <!-- body -->
+      <rect x="-18" y="10" width="38" height="50" rx="14" fill="#ffffff"/>
+      <!-- arms -->
+      <rect x="18" y="16" width="10" height="30" rx="5" fill="#f2f2fa" transform="rotate(-30 22 20)"/>
+      <rect x="-28" y="16" width="10" height="30" rx="5" fill="#f2f2fa" transform="rotate(30 -23 20)"/>
+      <!-- legs -->
+      <rect x="-14" y="54" width="14" height="30" rx="6" fill="#f2f2fa" transform="rotate(10 -7 54)"/>
+      <rect x="4" y="54" width="14" height="30" rx="6" fill="#f2f2fa" transform="rotate(-14 11 54)"/>
+      <!-- helmet -->
+      <circle cx="1" cy="-6" r="24" fill="#ffffff"/>
+      <ellipse cx="4" cy="-6" rx="16" ry="13" fill="#1e3a8a"/>
+      <ellipse cx="-1" cy="-11" rx="5" ry="3" fill="#7fb2ff" opacity="0.8"/>
+      <!-- chest light -->
+      <circle cx="1" cy="30" r="4" fill="#ff5470">
+        <animate attributeName="opacity" values="1;0.2;1" dur="1s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- Shadow that shrinks as the astronaut jumps -->
+  <ellipse cx="470" cy="262" rx="30" ry="6" fill="#000" opacity="0.25">
+    <animate attributeName="rx" values="30;16;30" keyTimes="0;0.5;1" dur="2.6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.25;0.1;0.25" keyTimes="0;0.5;1" dur="2.6s" repeatCount="indefinite"/>
+  </ellipse>
+</svg>
